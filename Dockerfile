@@ -17,3 +17,7 @@ RUN npm install
 # Unlike RUN, CMD runs a command after the image is built, once we run the container. 
 # As with this project, CMD is typically a start command.
 CMD [ "npm", "start" ]
+
+# need to expose and publish the port or the page will not run
+EXPOSE 3000
+# CMD line -- docker run -p 3000:3000 greeno
